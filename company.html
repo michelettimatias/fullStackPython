@@ -22,95 +22,39 @@
             </div>
             <nav class="mainMenu">
                 <ul>
-                    <li><a href="#">Soluciones</a></li>
+                    <li><a href="index.html">Soluciones</a></li>
                     <li><a href="products.html">Productos</a></li>
-                    <li><a href="company.html">Compañía</a></li>
+                    <li><a href="#">Compañía</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="burgerMenuButton">
+                <span class="material-symbols-outlined burgerMenuButton" v-on:click="changeMenuIcon">{{burgerMenuIcon}}</span>
+            </div>
+            <div class="burgerMenuList" v-if="seen">
+                <ul>
+                    <li><a href="index.html">Soluciones</a></li>
+                    <li><a href="products.html">Productos</a></li>
+                    <li><a href="#">Compañía</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </header>
-    <section class="bray_cover">
-        <h2>Aliados estratégicos de Bray en Argentina</h2>
-    </section>
     <main>
-        <section class="grid4">
-            <h2 class="span4">Principales Mercados</h2>
-            <article class="wide-card">
-                <div class="wide-card-img">
-                    <p class="icon"><span class="material-symbols-outlined">component_exchange</span></p>
-                </div>
-                <div class="wide-card-text">
-                    <h3>Industria</h3>
-                    <p>Estamos presente en una gran variedad de industrias. Disponemos de personal específico capacitado en los distintos tipos de aplicaciones del mercado industrial, como la industrias química, alimenticias, siderúrgicas, energéticas, entre muchas otras.</p>
-                </div>
-            </article>
-            <article class="wide-card">
-                <div class="wide-card-img">
-                    <p class="icon"><span class="material-symbols-outlined">water</span></p>
-                </div>
-                <div class="wide-card-text">
-                    <h3>Agua y saneamiento</h3>
-                    <p>Para nosotros, este mercado es fundamental, por lo que desde el año 2004 desarrollamos la división “Rennell Agua y Saneamiento” para poder satisfacer las necesidades específicas de este segmento.</p>
-            </article>
-            <article class="wide-card">
-                <div class="wide-card-img">
-                    <p class="icon"><span class="material-symbols-outlined">landslide</span></p>
-                </div>
-                <div class="wide-card-text">
-                    <h3>Minería</h3>
-                    <p>La minería argentina no es una promesa, es una realidad. Y desde sus comienzos, hemos acompañamos su crecimiento. De-watering subterráneo, trasvase en tanques de lixiviación y espesadores, y celdas de heap leaching son algunos de los procesos que se apoyan en nuestros productos.</p>
-            </article>
-            <article class="wide-card">
-                <div class="wide-card-img">
-                    <p class="icon"><span class="material-symbols-outlined">local_gas_station</span></p>
-                </div>
-                <div class="wide-card-text">
-                    <h3>Petróleo y gas</h3>
-                    <p>Tenemos vasta experiencia y conocimientos en el mercado de Oil & Gas. Contamos con una completa línea de productos y servicios específicos para proveer a este segmento.</p>
-            </article>
-            <h2 class="span4">Mercados secundarios</h2>
-            <article>
-                <p><span class="material-symbols-outlined">opacity</span></p>
-                <h3>Combustibles alternativos</h3>
-                <p>Para aplicaciones que requieren un servicio superior con un mantenimiento mínimo, como la industria de la energía nuclear y los combustibles alternativos, Bray es la solución.</p>
-            </article>
-            <article>
-                <span class="material-symbols-outlined">science</span>
-                <h3>Química y petroquímica</h3>
-                <p>Simplifique todo tipo de aplicaciones, desde químicos básicos hasta polímeros y químicos especiales, con las válvulas y accesorios de automatización de Bray.</p>
-            </article>
-            <article>
-                <span class="material-symbols-outlined">fastfood</span>
-                <h3>Alimentos y bebidas</h3>
-                <p>Las válvulas de Bray se usan para servicios sanitarios, alimentos y bebidas, servicios antisépticos, agua potable, CO2, limpieza in situ (CIP), cervecerías y más.</p>
-            </article>
-            <article>
-                <p><span class="material-symbols-outlined">ac_unit</span></p>
-                <h3>Climatización</h3>
-                <p>Bray Commercial ofrece válvulas mariposa, válvulas esféricas y válvulas independientes de presión automatizadas al mercado de la climatización de edificios comerciales a nivel mundial.</p>
-            </article>
-            <article>
-                <span class="material-symbols-outlined">directions_boat</span>
-                <h3>Náutica y construcción naval</h3>
-                <p>Embarcaciones navales y comerciales de todo el mundo usan productos de precisión de Bray para el control de flujo en sus sistemas de lastre, de colector contraincendios y de combustible.</p>
-            </article>
-            <article>
-                <span class="material-symbols-outlined">vaccines</span>
-                <h3>Industria farmacéutica y biotecnología</h3>
-                <p>Las válvulas y soluciones de automatización de válvulas de Bray para aplicaciones sanitarias y de limpieza in situ (CIP) ofrecen calidad y confiabilidad en condiciones delicadas.</p>
-            </article>
-            <article>
-                <span class="material-symbols-outlined">wb_incandescent</span>
-                <h3>Energía/FGD</h3>
-                <p>Durante más de 25 años, las válvulas y actuadores de válvula de Bray han ofrecido resultados confiables bajo las altas presiones y temperaturas de las centrales eléctricas modernas.</p>
-            </article>
-            <article>
-                <span class="material-symbols-outlined">note</span>
-                <h3>Pulpa y papel</h3>
-                <p>Bray ofrece soluciones probadas de control de flujo para los procesos peligrosos, corrosivos, abrasivos y de alta presión de la industria de la pulpa y el papel.</p>
-            </article>
-        </section>
+        <section>
+            <h2 class="span4">Nuestra empresa</h2>
+            <p>Somos una compañía Argentina creada con el compromiso de brindar la mejor atención a nuestros clientes, mejorar día a día la formación de nuestra gente y posibilitar una alianza de largo plazo entre Valvtronic y nuestro entorno. Hemos nacido y crecido en este negocio y de él dependemos.</p><p>
+                Cada una de las personas que forma parte de Valvtronic posee un amplio conocimiento de los distintos procesos, productos y aplicaciones en el manejo de fluidos, manteniendo la más amplia gama de soluciones que hoy aporta la innovación y tecnología.</p><p>
+                
+                Contamos con un departamento de ingeniería propio y con el soporte técnico internacional que nos brinda nuestro socio global Bray International Inc. Es una de nuestras prioridades la capacitación constante de nuestro recurso humano y de nuestros clientes. Trabajamos sin pausa, en la mejora de productos existentes y en el desarrollo de nuevas tecnologías.</p><p>
+                
+                Desde nuestra planta industrial en el departamento de Luján de Cuyo, provincia de Mendoza, ofrecemos al mercado el mejor servicio. Contamos en ella con recursos altamente capacitados, con una larga trayectoria en el conocimiento minucioso de fabricación de válvulas, accionamientos y accesorios. Tal como viene sucediendo desde nuestros comienzos, esperamos seguir contando con ustedes, nuestros clientes, como principal motor de desarrollo de nuestros negocios.</p><p>
+                
+                Nos comprometemos desde Valvtronic, a priorizar la necesidad de dar soluciones a las personas y profesionales del sistema productivo, considerando que son estas el factor más relevante del éxito de las compañías.
+                Gracias al acompañamiento ininterrumpido brindado por nuestros clientes lideramos con orgullo y con gran responsabilidad el mercado de las válvulas manuales y automáticas en nuestro país. Desde 2004 nos encontramos proveyendo no sólo a nuestros mercados, sino a países vecinos, tales como Uruguay y Bolivia.</p><p>
+                
+                Esperamos convertirnos en su socio estratégico para la concreción de sus proyectos y brindarles la mejor experiencia de compra.</p>
     </main>
     <footer>
         <div class="footer_cont">
@@ -118,42 +62,52 @@
                 <img src="img/logo_03.svg" alt="Logo Valvtronic">
             </div>
             <div>
-                <h5>Productos</h5>
+                <h4>Productos</h4>
                 <ul>
-                    <li>Válvulas mariposa</li>
-                    <li>Válvulas eléctricas</li>
-                    <li>Válvulas de cuchilla</li>
-                    <li>Válvulas de control</li>
-                    <li>Válvulas de retención</li>
-                    <li>Actuadores</li>
-                    <li>Accesorios de control</li>
-                    <li>Criogénico</li>
+                    <li><a href="products.html">Válvulas</li>
+                    <li><a href="products.html">Accesorios</a></li>
                 </ul>
             </div>
             <div>
-                <h5>Soluciones</h5>
+                <h4>Soluciones</h4>
                 <ul>
-                    <li>Industria</li>
-                    <li>Soluciones integradas</li>
+                    <li><a href="index.html">Industria</a></li>
+                    <li><a href="index.html">Soluciones integradas</a></li>
                 </ul>
             </div>
             <div>
-                <h5>Compañía</h5>
+                <h4>Compañía</h4>
                 <ul>
-                    <li>Nosotros</li>
-                    <li>Ubicaciones</li>
-                    <li>Asociación</li>
+                    <li><a href="company.html">Nosotros</a></li>
+                    <li><a href="company.html">Ubicaciones</a></li>
+                    <li><a href="company.html">Asociación</a></li>
                 </ul>
             </div>
             <div>
-                <h5>Contacto</h5>
+                <h4>Contacto</h4>
                 <ul>
-                    <li>Asd</li>
-                    <li>Asd</li>
-                    <li>Asd</li>
+                    <li><a href="contact.html"><i class="fa-regular fa-comment"></i> Dejanos tu mensaje</a></li>
+                    <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
                 </ul>
             </div>
         </div>
+        <div class="footer2">
+            <div>
+                <a href="index.html"><h4>Soluciones</h4></a>
+            </div>
+            <div>
+                <a href="products.html"><h4>Productos</h4></a>
+            </div>
+            <div>
+                <a href="company.html"><h4>Compañía</h4></a>
+            </div>
+            <div>
+                <a href="contact.html"><h4>Contacto</h4></a>
+            </div>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

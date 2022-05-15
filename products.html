@@ -28,6 +28,17 @@
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="burgerMenuButton">
+                <span class="material-symbols-outlined burgerMenuButton" v-on:click="changeMenuIcon">{{burgerMenuIcon}}</span>
+            </div>
+            <div class="burgerMenuList" v-if="seen">
+                <ul>
+                    <li><a href="index.html">Soluciones</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="company.html">Compañía</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -105,42 +116,52 @@
                 <img src="img/logo_03.svg" alt="Logo Valvtronic">
             </div>
             <div>
-                <h5>Productos</h5>
+                <h4>Productos</h4>
                 <ul>
-                    <li>Válvulas mariposa</li>
-                    <li>Válvulas eléctricas</li>
-                    <li>Válvulas de cuchilla</li>
-                    <li>Válvulas de control</li>
-                    <li>Válvulas de retención</li>
-                    <li>Actuadores</li>
-                    <li>Accesorios de control</li>
-                    <li>Criogénico</li>
+                    <li><a href="products.html">Válvulas</li>
+                    <li><a href="products.html">Accesorios</a></li>
                 </ul>
             </div>
             <div>
-                <h5>Soluciones</h5>
+                <h4>Soluciones</h4>
                 <ul>
-                    <li>Industria</li>
-                    <li>Soluciones integradas</li>
+                    <li><a href="index.html">Industria</a></li>
+                    <li><a href="index.html">Soluciones integradas</a></li>
                 </ul>
             </div>
             <div>
-                <h5>Compañía</h5>
+                <h4>Compañía</h4>
                 <ul>
-                    <li>Nosotros</li>
-                    <li>Ubicaciones</li>
-                    <li>Asociación</li>
+                    <li><a href="company.html">Nosotros</a></li>
+                    <li><a href="company.html">Ubicaciones</a></li>
+                    <li><a href="company.html">Asociación</a></li>
                 </ul>
             </div>
             <div>
-                <h5>Contacto</h5>
+                <h4>Contacto</h4>
                 <ul>
-                    <li>Asd</li>
-                    <li>Asd</li>
-                    <li>Asd</li>
+                    <li><a href="contact.html"><i class="fa-regular fa-comment"></i> Dejanos tu mensaje</a></li>
+                    <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
                 </ul>
             </div>
         </div>
+        <div class="footer2">
+            <div>
+                <a href="index.html"><h4>Soluciones</h4></a>
+            </div>
+            <div>
+                <a href="products.html"><h4>Productos</h4></a>
+            </div>
+            <div>
+                <a href="company.html"><h4>Compañía</h4></a>
+            </div>
+            <div>
+                <a href="contact.html"><h4>Contacto</h4></a>
+            </div>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

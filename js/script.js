@@ -1,3 +1,25 @@
+//MENÚ HAMBURGUESA
+var burgerMenu = new Vue ({
+    el:".head",
+    data:{
+        burgerMenuIcon:"menu",
+        seen: false
+    },
+    methods:{
+        changeMenuIcon: function(){
+            if(this.burgerMenuIcon=="close"){
+                this.burgerMenuIcon="menu"
+                this.seen=false
+                console.log(this.seen)
+            }else{
+                this.burgerMenuIcon="close"
+                this.seen=true
+                console.log(this.seen)
+            }
+        }
+    }
+});
+
 //VALIDACIÓN FORMULARIO DE CONTACTO
 
 function formValidate(){

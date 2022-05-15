@@ -28,9 +28,17 @@
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </nav>
-            <nav class="burgerMenu">
-                <span class="material-symbols-outlined" v-on:click=changeMenuIcon()>{{burgerMenuIcon}}</span>
-            </nav>
+            <div class="burgerMenuButton">
+                <span class="material-symbols-outlined burgerMenuButton" v-on:click="changeMenuIcon">{{burgerMenuIcon}}</span>
+            </div>
+            <div class="burgerMenuList" v-if="seen">
+                <ul>
+                    <li><a href="#">Soluciones</a></li>
+                    <li><a href="products.html">Productos</a></li>
+                    <li><a href="company.html">Compañía</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <section class="bray_cover">
@@ -183,13 +191,28 @@
             <div>
                 <h4>Contacto</h4>
                 <ul>
-                    <li><a href="contact.html">Dejanos tu mensa</a></li>
-                    <li><a href="contact.html">Ubicaciones</a></li>
+                    <li><a href="contact.html"><i class="fa-regular fa-comment"></i> Dejanos tu mensaje</a></li>
+                    <li><a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
                 </ul>
             </div>
         </div>
+        <div class="footer2">
+            <div>
+                <a href="index.html"><h4>Soluciones</h4></a>
+            </div>
+            <div>
+                <a href="products.html"><h4>Productos</h4></a>
+            </div>
+            <div>
+                <a href="company.html"><h4>Compañía</h4></a>
+            </div>
+            <div>
+                <a href="contact.html"><h4>Contacto</h4></a>
+            </div>
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
