@@ -1,5 +1,5 @@
 //MENÚ HAMBURGUESA
-var burgerMenu = new Vue ({
+const burgerMenu = new Vue ({
     el:".head",
     data:{
         burgerMenuIcon:"menu",
@@ -10,11 +10,9 @@ var burgerMenu = new Vue ({
             if(this.burgerMenuIcon=="close"){
                 this.burgerMenuIcon="menu"
                 this.seen=false
-                console.log(this.seen)
             }else{
                 this.burgerMenuIcon="close"
                 this.seen=true
-                console.log(this.seen)
             }
         }
     }
@@ -23,25 +21,38 @@ var burgerMenu = new Vue ({
 //VALIDACIÓN FORMULARIO DE CONTACTO
 
 function formValidate(){
-    validateItem("#message", "");
-    validateItem("#topic", "");
-    validateItem("#eMail", "e-Mail");
-    validateItem("#lastName", "Apellido");
-    validateItem("#firstName", "Nombre");
+    if(validateItem("#message", "")
+    & validateItem("#topic", "")
+    & validateItem("#eMail", "e-Mail")
+    & validateItem("#lastName", "Apellido")
+    & validateItem("#firstName", "Nombre")){
+        formAlert();
+    }
+}
+
+function closeFormAlert(){
+    let formAlert=document.querySelector(".formAlert");
+    formAlert.style.display="none";
+}
+
+function formAlert(){
+    let formAlert=document.querySelector(".formAlert");
+    formAlert.style.display="flex";
 }
 
 
 function validateItem(elementID, placeHolder){
-    var element=document.querySelector(elementID);
+    let element=document.querySelector(elementID);
     if(element.value.length==0){
         element.classList.add("inputAlert");
         element.focus();
         if(element.id=="topic"){
             element[0].innerHTML="Seleccione una opción";
+            return false;
         }else{
             element.placeholder="Complete este campo";
+            return false;
         }
-        return(false);
     }else{
         if(element.id=="eMail"){
             if(element.value.includes("@")){
@@ -55,26 +66,25 @@ function validateItem(elementID, placeHolder){
                         element.focus();
                         element.value="";
                         element.placeholder="Introduzca una dirección de correo válida";
-                        console.log(2);
+                        return false;
                     }
                 }else{
                     element.classList.add("inputAlert");
                     element.focus();
                     element.value="";
                     element.placeholder="Introduzca una dirección de correo válida";
-                    console.log(3);
+                    return false;
                 }
             }else{
                 element.classList.add("inputAlert");
                 element.focus();
                 element.placeholder="Introduzca una dirección de correo válida";
+                return false;
                 element.value="";
-                console.log(4);
             }
         }else{
             element.classList.remove("inputAlert");
             element.placeholder=placeHolder;
-            console.log(5);
             return(true);
         }        
     }
