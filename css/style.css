@@ -84,12 +84,14 @@ h1{
 .bray_cover{
     background-image: url('../img/rtc-jpg.png');
     height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bray_cover h2{
     margin-top: 0;
     font-size: 60px;
-    line-height: 300px;
     color: #FFF;
     text-shadow: 0 0px 5px rgba(0, 0, 0, 1);
 }
@@ -185,6 +187,9 @@ main{
 
 .card:hover{
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+}
+
+.rotateScale:hover{
     transform: rotate(-2deg) scale(1.1,1.1);
 }
 
@@ -274,7 +279,6 @@ textarea{
 h2{
     text-align: center;
     font-size: 36px;
-    line-height: 100px;
     margin-top: 40px;
     color: #002B49;
 }
@@ -294,6 +298,35 @@ main{
 iframe{
     width: 100%;
     height: 370px;
+}
+
+
+
+
+
+
+
+/*---------------COMPANY---------------*/
+
+
+.companySection{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+    margin-top: 30px;
+}
+
+.companyImage{
+    grid-column: span 3;
+}
+
+.companyImage img{
+    width: 100%;
+}
+
+.companyText{
+    grid-column: span 3;
 }
 
 
@@ -408,7 +441,6 @@ footer{
     
     .bray_cover h2{
         font-size: 36px;
-        line-height: 200px;
     }
 
     h2{
@@ -576,7 +608,6 @@ footer{
 
     h2{
         font-size: 30px;
-        line-height: 50px;
     }
     
     .card{
@@ -627,4 +658,14 @@ footer{
     #footer_logo{
         grid-column: span 4;
     }
+
+    
+
+.companyImage{
+    grid-column: span 6;
+}
+
+.companyText{
+    grid-column: span 6;
+}
 }
